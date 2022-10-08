@@ -15,7 +15,7 @@ def call(String stageName){
   else if ("${stageName}" == "Deploy To UAT")
   {
     sh "echo 'deploy to UAT'  "
-    deploy adapters: [tomcat8(credentialsId: 'Tomcat-credentials', path: '', url: 'http://172.31.10.131:8080')], contextPath: null, onFailure: false, war: 'target/*war'
+   deploy adapters: [tomcat9(credentialsId: 'Tomcat-cred', path: '', url: 'http://34.229.84.67:8080/')], contextPath: null, war: 'target/*war'
   }
 }
 
